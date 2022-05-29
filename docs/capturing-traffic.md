@@ -21,7 +21,7 @@ MoinCaster uses HTTPS for communication so it's fairy easy. Let's start.
 1. If you read requirements you need **rooted Android device or emulator** I use Nox Player. If you use physical Android Device you must have it connected to the same network as your computer.
 2. Move certificate that you exported from Burp Suite to your Android, in NoxPlayer I just have to drag and drop it into file manager.
 3. Import this certificate using Root Certificate Manager. It has to be imported as **System certificate**, that's why we use Root Certificate Manager. It required system to be rooted! There are other methods of installing system trusted cert on Android but I found it to be the easiest. ![Root certificate Manager](assets/5.png)
-4. Go to your WiFi settings and set up Proxy. As IP you must use IP of your PC in the network. If you use NoxPlayer... I just used IP of PC in my local network aswell. Other emulators can handle it differently, search in the interent ^^ ![Wifi proxy](assets/4.png)
+4. Go to your WiFi settings and set up Proxy. As IP you must use IP of your PC in the network. If you use NoxPlayer... I just used IP of PC in my local network aswell. Other emulators can handle it differently, search in the internet ^^ ![Wifi proxy](assets/4.png)
 
 ## It's working!
 Open your MoinCaster on the Android go into Proxy -> HTTP History in Burp Suite and look at all those HTTPS request made by the app! Now you can start finding out how game communicates with the server!
