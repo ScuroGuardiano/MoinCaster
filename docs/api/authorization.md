@@ -10,7 +10,6 @@ TODO. Prawdopodobnie w momencie instalacji tworzony jest JWT z ID urządzenia i 
 
 ### Headers
 ```http
-Host: vik-game.moonactive.net
 User-Agent: UnityPlayer/2020.3.29f1 (UnityWebRequest/1.0, libcurl/7.80.0-DEV)
 Accept-Encoding: gzip, deflate
 Accept: application/json
