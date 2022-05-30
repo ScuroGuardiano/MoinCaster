@@ -1,6 +1,6 @@
 # API Docs
 
-> I am too tired to write it in english
+> I am too tired to write it in English so whole this folder will be in Polish, deal with it.
 
 > Póki co wszystko testowane na koncie gościa!
 
