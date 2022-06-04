@@ -1,3 +1,5 @@
+import { ICardsBoomEvent } from "./events";
+
 export enum MessageType {
     RAID = 4,
     WELCOME_BACK = 112,
@@ -70,49 +72,4 @@ export interface IWelcomeBackMessageData {
 
 export interface IWelcomeBackMessage extends IMessageBase<IWelcomeBackMessageData> {}
 
-export interface ICardsBoomMessageData {
-    /**
-     * Event id
-     */
-    id: string;
-
-    /**
-     * Event type
-     */
-    type: string;
-
-    /**
-     * idk
-     */
-    subType: string;
-
-    remainingSeconds: number;
-
-    config: any;
-
-    /**
-     * Fuck that, we don't need this
-     */
-    clientOptions: any;
-
-    /**
-     * How many cards we can get from chest with this event
-     */
-    options: {
-        wooden: number;
-        golden: number;
-        magical: number;
-        mystery: number;
-        emerald: number;
-        sapphire: number;
-        ruby: number;
-        seasonal_low: number;
-        seasonal_high: number;
-        seasonal_medium: number;
-        seasonal_low_two: number;
-        seasonal_high_two: number;
-        seasonal_medium_two: number;
-    }
-}
-
-export interface ICardsBoomMessage extends IMessageBase<ICardsBoomMessageData> {}
+export interface ICardsBoomMessage extends IMessageBase<ICardsBoomEvent> {}

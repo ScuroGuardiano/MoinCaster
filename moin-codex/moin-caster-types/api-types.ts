@@ -1,3 +1,4 @@
+import { IBaseEvent } from "./events";
 import { MessageT } from "./message-types";
 
 export interface IBalanceDto {
@@ -280,61 +281,5 @@ export interface IBalanceExtended {
 }
 
 export interface IActiveEvents {
-    accumulation: IAccumulationEventInfo;
-    [key: string]: any; // TODO:
+    [key: string]: IBaseEvent;
 }
-
-export interface IAccumulationEventInfo {
-    options: IAccumulationEventInfoOptions;
-
-    // Fuck those for now
-    clientOptions: any;
-
-    id: string;
-    type: "accumulation",
-    subType: string;
-    remainingSeconds: number;
-    config: any;
-}
-
-export interface IAccumulationEventInfoOptions {
-    /**
-     * It's invalid
-     */
-    missionIndex: number;
-
-    /**
-     * It's invalid
-     */
-    currentAmount: number;
-
-    /**
-     * It's invalid
-     */
-    totalAmount: number;
-
-    /**
-     * It's invalid
-     */
-    reward: { [key: string]: number }
-
-    /**
-     * How many points to the event for how many hit symbols in a row
-     */
-    paytable: IAccumulationEventPaytableEntry[];
-    
-    /**
-     * Idk, it was set to true. Maybe it's false when we complete accumulation
-     */
-    accumulatedProgressEnabled: boolean;
-}
-
-export interface IAccumulationEventPaytableEntry {
-    action: IAccumulationEventPaytableAction;
-    blockIndex: number;
-    description: string;
-    points: number;
-    rowIndex: number;
-}
-
-export type IAccumulationEventPaytableAction = "match_1" | "match_2" | "match_3";
