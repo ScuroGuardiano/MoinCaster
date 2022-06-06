@@ -1,6 +1,16 @@
 import { IBaseEvent } from "./events";
 import { MessageT } from "./message-types";
 
+export interface ILoginResponse {
+  change_timestamp: number; // nie mam pojęcia czym to jest, może coś powiązane z Device[change]. Not sure.
+  profile: string; // Chyba coś związane z wersją clienta
+  sessionToken: string; // Nasz token JWT, którym będziemy autoryzować requesty
+  userId: string;
+  request_fb_age_range: boolean;
+  use_profile_time_stamp: boolean;
+  isNewClientProfileFormatActive: boolean;
+}
+
 export interface IBalanceDto {
     /**
      * Messages in inbox

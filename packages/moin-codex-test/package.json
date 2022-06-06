@@ -1,0 +1,10 @@
+{
+  "name": "moin-codex-test",
+  "packageManager": "yarn@3.2.1",
+  "scripts": {
+    "mct:start": "node index"
+  },
+  "dependencies": {
+    "moin-codex": "workspace:^"
+  }
+}
